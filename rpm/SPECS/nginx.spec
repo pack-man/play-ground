@@ -60,7 +60,7 @@ done
 
 
 %clean
-rm -rf %{buildroot}
+#rm -rf %{buildroot}
 
 %pre
 

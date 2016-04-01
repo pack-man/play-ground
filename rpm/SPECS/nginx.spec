@@ -73,21 +73,21 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-/usr/conf/fastcgi.conf
-/usr/conf/fastcgi.conf.default
-/usr/conf/fastcgi_params
-/usr/conf/fastcgi_params.default
-/usr/conf/koi-utf
-/usr/conf/koi-win
-/usr/conf/mime.types
-/usr/conf/mime.types.default
-/usr/conf/nginx.conf
-/usr/conf/nginx.conf.default
-/usr/conf/scgi_params
-/usr/conf/scgi_params.default
-/usr/conf/uwsgi_params
-/usr/conf/uwsgi_params.default
-/usr/conf/win-utf
+%config(noreplace) /usr/conf/fastcgi.conf
+%config(noreplace) /usr/conf/fastcgi.conf.default
+%config(noreplace) /usr/conf/fastcgi_params
+%config(noreplace) /usr/conf/fastcgi_params.default
+%config(noreplace) /usr/conf/koi-utf
+%config(noreplace) /usr/conf/koi-win
+%config(noreplace) /usr/conf/mime.types
+%config(noreplace) /usr/conf/mime.types.default
+%config(noreplace) /usr/conf/nginx.conf
+%config(noreplace) /usr/conf/nginx.conf.default
+%config(noreplace) /usr/conf/scgi_params
+%config(noreplace) /usr/conf/scgi_params.default
+%config(noreplace) /usr/conf/uwsgi_params
+%config(noreplace) /usr/conf/uwsgi_params.default
+%config(noreplace) /usr/conf/win-utf
 /usr/html/50x.html
 /usr/html/index.html
 /usr/sbin/nginx

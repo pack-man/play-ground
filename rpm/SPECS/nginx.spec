@@ -31,7 +31,7 @@ Headers and additional dev files needed for building and developing on top of ng
 %setup -q
 
 %build
-%configure
+./configure --prefix=/usr
 #./configure  --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info
 make %{?_smp_mflags}
 #inspect the Makefile and see if there is a test target, if so then:
@@ -73,7 +73,24 @@ done
 
 %files
 %defattr(-,root,root,-)
-
+%config(noreplace) /usr/conf/fastcgi.conf
+%config(noreplace) /usr/conf/fastcgi.conf.default
+%config(noreplace) /usr/conf/fastcgi_params
+%config(noreplace) /usr/conf/fastcgi_params.default
+%config(noreplace) /usr/conf/koi-utf
+%config(noreplace) /usr/conf/koi-win
+%config(noreplace) /usr/conf/mime.types
+%config(noreplace) /usr/conf/mime.types.default
+%config(noreplace) /usr/conf/nginx.conf
+%config(noreplace) /usr/conf/nginx.conf.default
+%config(noreplace) /usr/conf/scgi_params
+%config(noreplace) /usr/conf/scgi_params.default
+%config(noreplace) /usr/conf/uwsgi_params
+%config(noreplace) /usr/conf/uwsgi_params.default
+%config(noreplace) /usr/conf/win-utf
+/usr/html/50x.html
+/usr/html/index.html
+/usr/sbin/nginx
 %doc
 %_defaultlicensedir/%{name}
 %doc %_defaultdocdir/%{name}/*

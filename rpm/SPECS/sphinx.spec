@@ -74,6 +74,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+
 %doc
 %_defaultlicensedir/%{name}
 %doc %_defaultdocdir/%{name}/*

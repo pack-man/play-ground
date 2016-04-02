@@ -11,8 +11,8 @@ Packager: Jess Portnoy <jess@packman.io>
 Source0: %{name}-%{version}.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-#BuildRequires: @@BUILD_REQUIRES@@
-Requires: expat, glibc, keyutils-libs, krb5-libs, libcom_err, libgcc, libselinux, libstdc++, mariadb-libs, openssl-libs, pcre, xz-libs, zlib
+BuildRequires: expat-devel keyutils-libs-devel libcom_err-devel libselinux-devel libstdc++-devel pcre-devel zlib-devel 
+Requires: expat, keyutils-libs, krb5-libs, libcom_err, libgcc, libselinux, libstdc++, mariadb-libs, openssl-libs, pcre, xz-libs, zlib
 
 %description
 Sphinx is an open source full text search server, designed from the ground up with performance, relevance (aka search quality), and integration simplicity in mind. 

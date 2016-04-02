@@ -1,9 +1,12 @@
+%global sphinx_user sphinx
+%global sphinx_group sphinx
 Name: sphinx
 Version: 2.2.10
 Release: 1
 Summary: Sphinx is an open source full text search server, designed from the ground up with performance, relevance (aka search quality), and integration simplicity in mind. 
 
-License: @@PACKAGE_LICENSE@@
+Group:          Applications/Text
+License:        GPLv2+
 URL: http://sphinxsearch.com
 Packager: Jess Portnoy <jess@packman.io>
 
@@ -13,6 +16,8 @@ BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires: expat-devel keyutils-libs-devel libcom_err-devel libselinux-devel libstdc++-devel pcre-devel zlib-devel 
 Requires: expat, keyutils-libs, krb5-libs, libcom_err, libgcc, libselinux, libstdc++, mariadb-libs, openssl-libs, pcre, xz-libs, zlib
+Requires(post): chkconfig
+Requires(preun): chkconfig initscripts
 
 %description
 Sphinx is an open source full text search server, designed from the ground up with performance, relevance (aka search quality), and integration simplicity in mind. 
@@ -61,12 +66,24 @@ done
 rm -rf %{buildroot}
 
 %pre
+getent group %{sphinx_group} >/dev/null || groupadd -r %{sphinx_group}
+getent passwd %{sphinx_user} >/dev/null || \
+useradd -r -g %{sphinx_group} -d %{sphinx_home} -s /bin/bash \
+-c "Sphinx Search" %{sphinx_user}
+exit 0
 
 %post
+/sbin/chkconfig --add searchd
 
 %preun
+if [ $1 = 0 ] ; then
+    /sbin/service searchd stop >/dev/null 2>&1
+    /sbin/chkconfig --del searchd
+fi
 
-%postun
+%post -p /sbin/ldconfig -n libsphinxclient
+
+%postun -p /sbin/ldconfig -n libsphinxclient
 
 
 %files

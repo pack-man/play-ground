@@ -33,7 +33,7 @@ Headers and additional dev files needed for building and developing on top of sp
 %setup -q
 
 %build
-./configure --prefix=/usr/sphinx
+%configure
 make %{?_smp_mflags}
 #inspect the Makefile and see if there is a test target, if so then:
 #make test
@@ -74,7 +74,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-
 %doc
 %_defaultlicensedir/%{name}
 %doc %_defaultdocdir/%{name}/*

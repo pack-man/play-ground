@@ -12,7 +12,7 @@ Source0: %{name}-%{version}.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 #BuildRequires: @@BUILD_REQUIRES@@
-Requires: 
+Requires: expat, glibc, keyutils-libs, krb5-libs, libcom_err, libgcc, libselinux, libstdc++, mariadb-libs, openssl-libs, pcre, xz-libs, zlib
 
 %description
 Sphinx is an open source full text search server, designed from the ground up with performance, relevance (aka search quality), and integration simplicity in mind. 
@@ -71,6 +71,19 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%config(noreplace) /etc/sphinx.conf.dist
+%config(noreplace) /etc/sphinx-min.conf.dist
+/etc/example.sql
+/usr/bin/indexer
+/usr/bin/indextool
+/usr/bin/searchd
+/usr/bin/spelldump
+/usr/bin/wordbreaker
+/usr/share/man/man1/indexer.1.gz
+/usr/share/man/man1/indextool.1.gz
+/usr/share/man/man1/search.1.gz
+/usr/share/man/man1/searchd.1.gz
+/usr/share/man/man1/spelldump.1.gz
 %doc
 %_defaultlicensedir/%{name}
 %doc %_defaultdocdir/%{name}/*

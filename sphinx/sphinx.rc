@@ -1,14 +1,14 @@
 PACKMAN_SPACE=play-ground
 PACKMAN_PRIVATE_KEY=~/.ssh/id_rsa
-PACKAGE_NAME="ffmpeg"
-PACKAGE_VERSION="3.0"
+PACKAGE_NAME="sphinx"
+PACKAGE_VERSION="2.2.10"
 PACKAGE_BRANCH="${PACKAGE_NAME}-${PACKAGE_VERSION}"
 # comma separated in the form of $DIST:$VERSION
 SUPPORTED_ENVS="centos:7"
 # URL to download the package source from
-SOURCE_URL="http://ffmpeg.org/releases/ffmpeg-3.0.tar.bz2"
+SOURCE_URL="http://sphinxsearch.com/files/sphinx-2.2.10-release.tar.gz"
 # Project URL
-PROJECT_URL="http://ffmpeg.org"
+PROJECT_URL="http://sphinxsearch.com"
 PACKAGE_DESCRIPTION="/home/packman/tmp/build/$PACKMAN_SPACE/${PACKAGE_NAME}/DESCRIPTION"
 MAINTAINER_NAME="Jess Portnoy"
 MAINTAINER_EMAIL="jess@packman.io"

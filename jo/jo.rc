@@ -1,0 +1,20 @@
+PACKMAN_SPACE=play-ground
+PACKMAN_PRIVATE_KEY=~/.ssh/id_rsa
+PACKAGE_NAME="jo"
+PACKAGE_VERSION="1.0"
+PACKAGE_BRANCH="${PACKAGE_NAME}-${PACKAGE_VERSION}"
+# comma separated in the form of $DIST:$VERSION
+SUPPORTED_ENVS="centos:7"
+# URL to download the package source from
+SOURCE_URL="https://github.com/jpmens/jo/archive/v1.0.zip"
+# Project URL
+PROJECT_URL="https://github.com/jpmens/jo"
+PACKAGE_DESCRIPTION="/etc/packman/packman-packages-meta/$PACKMAN_SPACE-${PACKAGE_NAME}-${PACKAGE_VERSION}/${PACKAGE_NAME}/DESCRIPTION"
+MAINTAINER_NAME="Jess Portnoy"
+MAINTAINER_EMAIL="jess@packman.io"
+# optional for deb. If not supplied, use container's dist name
+#DIST_NAME="@@DIST_NAME@@"
+
+
+IS_DAEMON=N
+DAEMON_USER=

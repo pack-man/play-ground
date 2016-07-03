@@ -11,8 +11,8 @@ Packager: Jess Portnoy <jess@packman.io>
 Source0: %{name}-%{version}.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires: 
-Requires: 
+BuildRequires: pcre-devel zlib-devel 
+Requires: nss-softokn-freebl, openssl-libs, pcre, zlib
 
 %description
 nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.

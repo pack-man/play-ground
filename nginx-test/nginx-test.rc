@@ -1,0 +1,19 @@
+PACKMAN_SPACE=play-ground
+PACKMAN_PRIVATE_KEY=~/.ssh/id_rsa
+PACKAGE_NAME="nginx-test"
+PACKAGE_VERSION="1.9.13"
+PACKAGE_BRANCH="${PACKAGE_NAME}-${PACKAGE_VERSION}"
+# comma separated in the form of $DIST:$VERSION
+SUPPORTED_ENVS="centos:7"
+# URL to download the package source from
+SOURCE_URL="http://nginx.org/download/nginx-1.9.13.tar.gz"
+# Project URL
+PROJECT_URL="http://nginx.org"
+PACKAGE_DESCRIPTION="/etc/packman/packman-packages-meta/$PACKMAN_SPACE/${PACKAGE_NAME}/DESCRIPTION"
+MAINTAINER_NAME="Jess Portnoy"
+MAINTAINER_EMAIL="jess@packman.io"
+# optional for deb. If not supplied, use container's dist name
+#DIST_NAME="@@DIST_NAME@@"
+
+
+IS_DAEMON=NDAEMON_USER=

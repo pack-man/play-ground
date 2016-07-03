@@ -9,10 +9,11 @@ SUPPORTED_ENVS="centos:7"
 SOURCE_URL="http://openssl.org/source/openssl-1.0.1s.tar.gz"
 # Project URL
 PROJECT_URL="http://openssl.org"
-PACKAGE_DESCRIPTION="/home/packman/tmp/build/$PACKMAN_SPACE/${PACKAGE_NAME}/DESCRIPTION"
+PACKAGE_DESCRIPTION="/etc/packman/packman-packages-meta/$PACKMAN_SPACE/${PACKAGE_NAME}/DESCRIPTION"
 MAINTAINER_NAME="Jess Portnoy"
 MAINTAINER_EMAIL="jess@packman.io"
 # optional for deb. If not supplied, use container's dist name
 #DIST_NAME="@@DIST_NAME@@"
 
 
+IS_DAEMON=NDAEMON_USER=

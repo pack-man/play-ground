@@ -1,7 +1,7 @@
 Name: openssl
 Version: 1.0.1
 Release: 1
-Summary: 
+Summary: OpenSSL is an open source project that provides a toolkit for the TLS and Secure Sockets Layer (SSL) protocols. 
 
 License: @@PACKAGE_LICENSE@@
 URL: http://openssl.org
@@ -15,14 +15,16 @@ BuildRequires:
 Requires: 
 
 %description
+OpenSSL is an open source project that provides a toolkit for the TLS and Secure Sockets Layer (SSL) protocols. 
 
+It is also a general-purpose cryptography library. 
 
 
 %prep
 %setup -q
 
 %build
-%configure
+./configure --prefix=/usr/openssl
 make %{?_smp_mflags}
 #inspect the Makefile and see if there is a test target, if so then:
 #make test

@@ -1,7 +1,7 @@
 Name: jo-test
 Version: 1.0
 Release: 1
-Summary: A small utility to create JSON objects
+Summary: 
 
 License: @@PACKAGE_LICENSE@@
 URL: https://github.com/jpmens/jo
@@ -15,7 +15,7 @@ BuildRequires:
 Requires: 
 
 %description
-A small utility to create JSON objects
+
 
 
 %prep
@@ -59,8 +59,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-/usr/bin/jo
-/usr/share/man/man1/jo.1.gz
 %doc
 %_defaultlicensedir/%{name}
 %doc %_defaultdocdir/%{name}/*

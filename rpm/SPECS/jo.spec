@@ -3,7 +3,7 @@ Version: 1.0
 Release: 1
 Summary: A small utility to create JSON objects
 
-License: @@PACKAGE_LICENSE@@
+License: GPLv2
 URL: https://github.com/jpmens/jo
 Packager: Jess Portnoy <jess@packman.io>
 

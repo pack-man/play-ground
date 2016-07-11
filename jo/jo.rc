@@ -4,14 +4,14 @@ PACKAGE_NAME="jo"
 PACKAGE_VERSION="1.0"
 PACKAGE_BRANCH="${PACKAGE_NAME}-${PACKAGE_VERSION}"
 # comma separated in the form of $DIST:$VERSION
-SUPPORTED_ENVS="centos:7"
+SUPPORTED_ENVS="@@SUPPORTED_ENVS@@"
 # URL to download the package source from
-SOURCE_URL="https://github.com/jpmens/jo/archive/v1.0.zip"
+SOURCE_URL="@@SOURCE_URL@@"
 # Project URL
-PROJECT_URL="https://github.com/jpmens/jo"
+PROJECT_URL="@@PROJECT_URL@@"
 PACKAGE_DESCRIPTION="/etc/packman/packman-packages-meta/$PACKMAN_SPACE-${PACKAGE_NAME}-${PACKAGE_VERSION}/${PACKAGE_NAME}/DESCRIPTION"
-MAINTAINER_NAME="Jess Portnoy"
-MAINTAINER_EMAIL="jess@packman.io"
+MAINTAINER_NAME="@@MAINTAINER_NAME@@"
+MAINTAINER_EMAIL="@@MAINTAINER_EMAIL@@"
 # optional for deb. If not supplied, use container's dist name
 #DIST_NAME="@@DIST_NAME@@"
 
